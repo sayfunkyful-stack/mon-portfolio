@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+@theme {
+  --color-bg-primary: #000000;
+  --color-accent: #7E9CFF;
+  --color-text-primary: #F4F6FF;
+  --color-bg-secondary: #474747;
+  --color-bg-tertiary: #0F0F0F;
+  --spacing-space-m: 24px;
+  --spacing-space-l: 48px;
+}

@@ -4,7 +4,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <nav className="bg-black text-white px-6 md:px-24 py-6 flex items-center justify-between relative">
+    <nav className="bg-black text-white px-6 lg:px-30 py-6 flex items-center justify-between relative">
       {/* Logo */}
       <img src="/logo.svg" alt="Logo" className="w-10 h-10" />
 

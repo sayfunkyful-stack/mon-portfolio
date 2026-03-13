@@ -43,7 +43,7 @@ export default function Portfolio() {
             onClick={() => setActive(f)}
             className={`px-6 py-3 rounded-xl text-sm font-medium transition-colors ${
               active === f
-                ? "bg-blue-500 text-white"
+                ? "bg-accent text-white"
                 : "bg-[#1a1a1a] text-gray-400 hover:bg-[#222]"
             }`}
           >
@@ -78,8 +78,8 @@ export default function Portfolio() {
                 <span>{project.role}</span>
               </div>
               <div className="border-t border-gray-800 pt-6 flex gap-6 mt-2">
-                <a href="#" className="text-blue-400 underline text-sm font-semibold">LIVE DEMO ↗</a>
-                <a href="#" className="text-blue-400 underline text-sm font-semibold">SEE ON GITHUB ↗</a>
+                <a href="#" className="text-accent underline text-sm font-semibold">LIVE DEMO ↗</a>
+                <a href="#" className="text-accent underline text-sm font-semibold">SEE ON GITHUB ↗</a>
               </div>
             </div>
           </div>
