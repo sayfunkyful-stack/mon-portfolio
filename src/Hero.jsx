@@ -1,5 +1,4 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons'
+
 
 export default function Hero() {
   return (
@@ -14,11 +13,11 @@ export default function Hero() {
           <div className="flex gap-4">
             <a href="https://instagram.com" target="_blank" rel="noreferrer"
               className="w-10 h-10 rounded-full border border-gray-600 flex items-center justify-center hover:border-white transition-colors">
-              <FontAwesomeIcon icon={faInstagram} style={{ color: "white" }} />
+              
             </a>
 <a href="https://linkedin.com" target="_blank" rel="noreferrer"
   className="w-10 h-10 rounded-full border border-gray-600 flex items-center justify-center hover:border-white transition-colors">
-<FontAwesomeIcon icon={faLinkedin} style={{ color: "white" }} /></a>
+</a>
           </div>
           <div className="flex gap-4 mb-8 md:mb-0 flex-wrap">
             <a href="#contact"
