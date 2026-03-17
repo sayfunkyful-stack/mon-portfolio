@@ -32,7 +32,7 @@ export default function Portfolio() {
   const filtered = active === "All" ? projects : projects.filter(p => p.category === active)
 
   return (
-    <section className="bg-black text-white py-24 px-6">
+    <section className="bg-black text-white py-24 px-6 md:px-24 lg:px-48 ">
       <h2 className="text-4xl font-bold text-center mb-10">Portfolio</h2>
 
       {/* Filtres */}
@@ -53,7 +53,7 @@ export default function Portfolio() {
       </div>
 
       {/* Projets */}
-      <div className="max-w-6xl mx-auto flex flex-col gap-12">
+      <div className=" flex flex-col gap-12">
         {filtered.map((project, i) => (
           <div key={i} className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             {/* Image placeholder */}

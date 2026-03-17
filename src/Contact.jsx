@@ -10,13 +10,13 @@ export default function Contact() {
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value })
 
   return (
-    <section id="contact" className="bg-black text-white py-24 px-6 text-center">
+    <section id="contact" className="bg-black text-white py-24 px-6 text-center md:px-24 lg:px-48 ">
       <h2 className="text-4xl font-bold mb-4">Contactez-moi</h2>
       <p className="text-gray-400 mb-16">
         Je réponds généralement sous 48 heures, parfois plus rapidement si je suis disponible.
       </p>
 
-      <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <input name="nom" placeholder="Nom" value={form.nom} onChange={handleChange}
           className="bg-[#111] rounded-xl px-5 py-4 text-white placeholder-gray-500 outline-none focus:ring-1 focus:ring-blue-500" />
         <input name="email" placeholder="Email" value={form.email} onChange={handleChange}

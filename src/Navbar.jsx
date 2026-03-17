@@ -4,7 +4,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <nav className="bg-black text-white px-6 lg:px-30 py-3 flex items-center justify-between relative rounded-full backdrop-blur-md bg-black/30 border border-white/20">
+    <nav className="bg-black text-white px-6 py-3 flex items-center justify-between relative rounded-full backdrop-blur-md bg-black/30 border border-white/20 md:pr-16 ">
       {/* Logo */}
       <img src="/logo.svg" alt="Logo" className="w-8 h-8" />
 

@@ -13,10 +13,10 @@ const tools = [
 
 export default function Tools() {
   return (
-    <section className="bg-gradient-to-r from-black from-10% to-gray-900 to-100% text-white py-24 px-6 text-center  ">
+    <section className="bg-gradient-to-r from-black from-10% to-gray-900 to-100% text-white py-24 px-6 text-center md:px-24 lg:px-48  ">
       <h2 className="text-4xl font-bold mb-4">Outils</h2>
       <p className="text-gray-400 text-xl mb-16">Technologies avec lesquelles je travaille</p>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 max-w-5xl mx-auto">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
         {tools.map((tool, i) => (
           <div key={i} className="rounded-2xl p-6 flex flex-col items-center gap-3 backdrop-blur-md bg-black/30 border border-white/20">
             {tool.svg ? tool.svg : <img src={tool.icon} alt={tool.name} className="w-12 h-12" />}

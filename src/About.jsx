@@ -30,7 +30,7 @@ const cards = [
 
 export default function About() {
   return (
-    <section className="bg-linear-to-bl from-gray-900 from-10% to-black text-white py-24 px-6 text-center">
+    <section className="bg-linear-to-bl from-gray-900 from-10% to-black text-white py-24 px-6 text-center md:px-24 lg:px-48 ">
       <h2 className="text-4xl font-bold mb-12">À mon propos</h2>
       <p className="text-gray-400 mb-24">
         Des créations sur mesure, au service d'une image forte et d'un contenu maîtrisé.

@@ -3,7 +3,7 @@ import Navbar from './Navbar';
 
 export default function Hero() {
   return (
-    <section className="relative bg-black text-white min-h-screen px-6 flex flex-col justify-between py-6">
+    <section className="relative bg-black text-white min-h-screen px-6 py-6 flex flex-col justify-between lg:px-48   lg:pb-32 md:px-24 md:py-24">
       
       {/* Dither background */}
 
@@ -26,7 +26,7 @@ export default function Hero() {
       <div className="flex-1 relative z-10" />
 
       {/* Bas de page */}
-      <div className="relative z-10 flex justify-between items-end md:flex-row flex-wrap">
+      <div className="relative z-10 flex justify-between items-end md:flex-row flex-wrap md:gap-12">
         
         {/* Bas gauche — réseaux + boutons */}
         <div className="flex flex-col gap-6">
