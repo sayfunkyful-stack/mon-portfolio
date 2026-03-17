@@ -1,6 +1,6 @@
 export default function Me() {
   return (
-    <section className="bg-linear-to-b from-gray-900 to-black text-white min-h-[90vh] px-8 py-24 pb-6    flex flex-col gap-8 lg:px-30">
+    <section className="bg-linear-to-b from-gray-900 to-black text-white min-h-[90vh] px-6 py-24 pb-6    flex flex-col gap-8 lg:px-30">
 <div class="bg-gray-800 h-124 border border-gray-700 rounded-2xl flex items-center justify-center mb-12 ">
 
 </div>
