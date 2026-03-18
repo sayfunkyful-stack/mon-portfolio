@@ -6,12 +6,9 @@ import Navbar from './Navbar';
 
 export default function Hero() {
   return (
-    <section className="relative bg-black text-white min-h-200 h-screen px-6 py-6 flex flex-col justify-between lg:px-48 md:pt-12   lg:pb-32 md:px-24 md:py-24 ">
+    <section className="relative bg-gradient-to-t from-black from-10% to-gray-900 to-100% text-white min-h-200 h-screen px-6 py-6 flex flex-col justify-between lg:px-48 md:pt-12   lg:pb-32 md:px-24 md:py-24 ">
       
       {/* Dither background */}
-
-
-{/* Background */}
 <div className="absolute inset-0 z-0 opacity-30" style={{ pointerEvents: 'none' }}>
   <DarkVeil
     hueShift={0}
@@ -22,12 +19,13 @@ export default function Hero() {
     warpAmount={0}
   />
 </div>
+
     
         <Navbar />
       
       {/* Espace central vide */}
       <div className="grid flex-1 relative z-10 content-center min-h-90 gap-10 max-w-1/2" >
-        <p className='text-lg font-medium text-accent'> FRONT END DEV</p>
+        <p className='text-lg font-medium text-accent font-[Inter]'> FRONT END DEV</p>
 <h1 className='text-6xl md:text-8xl font font-semibold max-w-[50vw] font-[Inter]'>Robin Schweizer</h1>
 
 

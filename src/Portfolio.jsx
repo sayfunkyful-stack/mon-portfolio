@@ -1,7 +1,9 @@
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 const projects = [
   {
+    slug: "embera-candles",
     title: "Site vitrine — EMBERA Candles",
     description: "Conception et développement d'un site vitrine pour une marque de bougies artisanales suisse. Design system complet, responsive et optimisé SEO.",
     year: "2024",
@@ -9,6 +11,7 @@ const projects = [
     category: "Website Design",
   },
   {
+    slug: "digimar",
     title: "Identité de marque — Digimar",
     description: "Création d'une identité visuelle complète pour un projet de marketing digital : logo, charte graphique, templates et système de design.",
     year: "2024",
@@ -16,6 +19,7 @@ const projects = [
     category: "Branding",
   },
   {
+    slug: "mon-cv",
     title: "Application web — Mon CV",
     description: "Application web permettant d'analyser un CV via l'API Claude. Interface utilisateur soignée, backend Node.js et génération de recommandations personnalisées.",
     year: "2024",
@@ -28,11 +32,12 @@ const filters = ["All", "Website Design", "App Mobile Design", "App Desktop", "B
 
 export default function Portfolio() {
   const [active, setActive] = useState("All")
+  const navigate = useNavigate()
 
   const filtered = active === "All" ? projects : projects.filter(p => p.category === active)
 
   return (
-    <section className="bg-black text-white py-24 px-6 md:px-24 lg:px-48 ">
+    <section className="bg-black text-white py-24 px-6 md:px-24 lg:px-48">
       <h2 className="text-4xl font-bold text-center mb-10">Portfolio</h2>
 
       {/* Filtres */}
@@ -53,7 +58,7 @@ export default function Portfolio() {
       </div>
 
       {/* Projets */}
-      <div className=" flex flex-col gap-12">
+      <div className="flex flex-col gap-12">
         {filtered.map((project, i) => (
           <div key={i} className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             {/* Image placeholder */}
@@ -77,9 +82,13 @@ export default function Portfolio() {
                 <span className="text-gray-400">Role</span>
                 <span>{project.role}</span>
               </div>
-              <div className="border-t border-gray-800 pt-6 flex gap-6 mt-2">
-                <a href="#" className="text-accent underline text-sm font-semibold">LIVE DEMO ↗</a>
-                <a href="#" className="text-accent underline text-sm font-semibold">SEE ON GITHUB ↗</a>
+              <div className="border-t border-gray-800 pt-6 mt-2">
+                <button
+                  onClick={() => navigate(`/projet/${project.slug}`)}
+                  className="text-accent border border-accent px-6 py-3 rounded-full text-sm font-semibold hover:bg-accent hover:text-black transition-colors"
+                >
+                  Voir le projet ↗
+                </button>
               </div>
             </div>
           </div>
