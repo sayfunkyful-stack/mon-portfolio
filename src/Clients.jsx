@@ -13,7 +13,7 @@ const clientLogos = [
 
 export default function Clients() {
   return (
-    <section className="bg-bg-tertiary text-white py-12 px-6 text-center align-middle content-center">
+    <section className="bg-bg-tertiary text-white py-12  text-center align-middle content-center" style={{height:'100%'}}>
       <div style={{ height: '100%', position: 'relative', overflow: 'hidden' }}>
         <LogoLoop
           logos={clientLogos}
@@ -24,7 +24,7 @@ export default function Clients() {
           hoverSpeed={0}
           scaleOnHover
           fadeOut
-          fadeOutColor="#000000"
+          fadeOutColor="#0f0f0f"
           ariaLabel="Clients"
         />
       </div>

@@ -14,9 +14,9 @@ export default function App() {
       <Hero />
       <Clients />
       <Tools />
+      <Portfolio />
       <About />
       <Me />
-      <Portfolio />
       <Contact />
     </>
   )
