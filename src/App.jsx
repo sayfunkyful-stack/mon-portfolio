@@ -1,8 +1,9 @@
 
 import Hero from './Hero'
+import Clients from './Clients'
+import Tools from './Tools'
 import About from './About'
 import Me from './Me'
-import Tools from './Tools'
 import Portfolio from './Portfolio'
 import Contact from './Contact'
 
@@ -11,9 +12,10 @@ export default function App() {
     <>
      
       <Hero />
+      <Clients />
+      <Tools />
       <About />
       <Me />
-      <Tools />
       <Portfolio />
       <Contact />
     </>

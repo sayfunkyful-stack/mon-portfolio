@@ -10,9 +10,9 @@ export default function Navbar() {
 
       {/* Liens desktop */}
       <div className="hidden md:flex gap-12">
-        <a href="#about" className="text-gray-300 hover:text-white transition-colors">À propos</a>
-        <a href="#projects" className="text-gray-300 hover:text-white transition-colors">Projets</a>
-        <a href="#contact" className="text-gray-300 hover:text-white transition-colors">Contact</a>
+        <a href="#about" className="text-gray-300 hover:text-white transition-colors font-medium">À propos</a>
+        <a href="#projects" className="text-gray-300 hover:text-white transition-colors font-medium">Projets</a>
+        <a href="#contact" className="text-gray-300 hover:text-white transition-colors font-medium">Contact</a>
       </div>
 
       {/* Bouton burger — mobile uniquement */}
