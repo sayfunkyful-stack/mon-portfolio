@@ -23,7 +23,7 @@ export default function Hero() {
         <Navbar />
       
       {/* Espace central vide */}
-      <div className="grid flex-1 relative z-10 content-center min-h-90 gap-10" >
+      <div className="grid flex-1 relative z-10 content-center min-h-90 gap-10 max-w-1/2" >
         <p className='text-lg font-medium text-accent'> FRONT END DEV</p>
 <h1 className='text-6xl md:text-8xl font font-semibold max-w-[50vw] font-[Inter]'>Robin Schweizer</h1>
 
