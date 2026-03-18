@@ -1,14 +1,14 @@
 import LogoLoop from './LogoLoop'
 
 const clientLogos = [
-  { src: "/public/images/logo-aph.png", alt: "APH" },
-  { src: "/public/images/logo-atelier-lumiere.png", alt: "Atelier Lumière" },
-  { src: "/public/images/logo-dessindigo.png", alt: "Dessin Digo" },
-  { src: "/public/images/logo-digimar.png", alt: "DigiMar" },
-  { src: "/public/images/logo-hmonster.png", alt: "HMonster" },
-  { src: "/public/images/logo-karting-vuiteboeuf.png", alt: "Karting Vuiteboeuf" },
-  { src: "/public/images/logo-mon-esprit.png", alt: "Mon Esprit" },
-  { src: "/public/images/logo-mybeaudy.png", alt: "MyBeaudy" },
+  { src: "/images/logo-aph.png", alt: "APH" },
+  { src: "/images/logo-atelier-lumiere.png", alt: "Atelier Lumière" },
+  { src: "/images/logo-dessindigo.png", alt: "Dessin Digo" },
+  { src: "/images/logo-digimar.png", alt: "DigiMar" },
+  { src: "/images/logo-hmonster.png", alt: "HMonster" },
+  { src: "/images/logo-karting-vuiteboeuf.png", alt: "Karting Vuiteboeuf" },
+  { src: "/images/logo-mon-esprit.png", alt: "Mon Esprit" },
+  { src: "/images/logo-mybeaudy.png", alt: "MyBeaudy" },
 ]
 
 export default function Clients() {
