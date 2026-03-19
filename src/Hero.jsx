@@ -8,17 +8,7 @@ export default function Hero() {
   return (
     <section className="relative bg-gradient-to-t from-black from-10% to-gray-900 to-100% text-white min-h-200 h-screen px-6 py-6 flex flex-col justify-between lg:px-48 md:pt-12   lg:pb-32 md:px-24 md:py-24 ">
       
-      {/* Dither background */}
-<div className="absolute inset-0 z-0 opacity-30" style={{ pointerEvents: 'none' }}>
-  <DarkVeil
-    hueShift={0}
-    noiseIntensity={0}
-    scanlineIntensity={0}
-    speed={2}
-    scanlineFrequency={0}
-    warpAmount={0}
-  />
-</div>
+
 
     
         <Navbar />

@@ -112,7 +112,7 @@ export default function Portfolio() {
                   onClick={() => openOverlay(project)}
                   className="text-accent border border-accent px-6 py-3 rounded-full text-sm font-semibold hover:bg-accent hover:text-black transition-colors"
                 >
-                  Voir le projet ↗
+                  Voir le projet
                 </button>
               </div>
             </div>
@@ -130,7 +130,7 @@ export default function Portfolio() {
           onClick={closeOverlay}
         >
           <div className="h-full"><div
-            className="bg-[#0f0f0f] border border-gray-800 rounded-2xl w-full max-w-4xl p-8 relative "
+            className="bg-[#0f0f0f] border border-gray-800 rounded-2xl w-full max-w-4xl p-8 relative  "
             onClick={e => e.stopPropagation()}
           >
             {/* Fermer */}
@@ -172,7 +172,7 @@ export default function Portfolio() {
             </div>
 
             {/* Contenu */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pb-12">
 
               {/* Description */}
               <div className="md:col-span-2">
@@ -214,7 +214,7 @@ export default function Portfolio() {
                   }}
                   className="mt-6 w-full text-accent border border-accent px-6 py-3 rounded-full text-sm font-semibold hover:bg-accent hover:text-black transition-colors"
                 >
-                  Voir la page complète ↗
+                  Voir la page complète
                 </button>
               </div>
             </div>
