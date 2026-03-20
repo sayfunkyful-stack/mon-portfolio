@@ -30,3 +30,4 @@ export const projects = [
     paragraphe: "J'ai développé une application web innovante qui permet d'analyser un CV en utilisant l'API Claude. L'application offre une interface utilisateur soignée et intuitive, conçue pour faciliter la navigation et l'interaction. Le backend est construit avec Node.js, assurant une performance rapide et fiable. L'application génère des recommandations personnalisées basées sur l'analyse du CV, aidant les utilisateurs à améliorer leur présentation et à maximiser leurs chances de succès dans leurs candidatures."
   },
 ]
+

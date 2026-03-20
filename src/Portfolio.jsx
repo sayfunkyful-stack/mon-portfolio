@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 
+
 const projects = [
   {
     slug: "embera-candles",
@@ -56,9 +57,10 @@ export default function Portfolio() {
     setSelected(null)
     setActiveImage(0)
   }
+  
 
   return (
-    <section className="bg-black text-white py-24 px-6 md:px-24 lg:px-48">
+    <section id="projects" className="bg-black text-white py-24 px-6 md:px-24 lg:px-48">
       <h2 className="text-4xl font-bold text-center mb-10">Portfolio</h2>
 
       {/* Filtres */}
@@ -75,11 +77,13 @@ export default function Portfolio() {
           >
             {f}
           </button>
+          
         ))}
+        
       </div>
 
       {/* Projets */}
-      <div className="flex flex-col gap-12">
+      <div className="flex flex-col gap-24">
         {filtered.map((project, i) => (
           <div key={i} className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 
@@ -180,7 +184,7 @@ export default function Portfolio() {
                 <h3 className="text-2xl font-bold mt-2 mb-4">{selected.title}</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">{selected.longDescription}</p>
               </div>
-</div>
+
               {/* Infos + Stack */}
               <div>
                 <p className="text-xs font-bold text-white uppercase tracking-widest mb-3">Project Info</p>
@@ -206,7 +210,7 @@ export default function Portfolio() {
                   </div>
                 </div>
 
-                {/* Bouton page complète */}
+                {/* Bouton page complète 
                 <button
                   onClick={() => {
                     closeOverlay()
@@ -215,10 +219,11 @@ export default function Portfolio() {
                   className="mt-6 w-full text-accent border border-accent px-6 py-3 rounded-full text-sm font-semibold hover:bg-accent hover:text-black transition-colors"
                 >
                   Voir la page complète
-                </button>
+                </button>*/}
               </div>
             </div>
           </div>
+        </div>
         </div>
       )}
     </section>

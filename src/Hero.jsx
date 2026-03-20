@@ -1,8 +1,5 @@
 import DarkVeil from './DarkVeil';
 import Navbar from './Navbar';
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-</style>
 
 export default function Hero() {
   return (
@@ -14,8 +11,8 @@ export default function Hero() {
         <Navbar />
       
       {/* Espace central vide */}
-      <div className="grid flex-1 relative z-10 content-center min-h-90 gap-10 max-w-1/2" >
-        <p className='text-lg font-medium text-accent font-[Inter]'> FRONT END DEV</p>
+      <div className="grid flex-1 relative z-10 content-center min-h-90 gap-6 max-w-1/2" >
+        <p className='text-sm font-medium text-accent font-[Inter]'> FRONT END DEVELOPPER</p>
 <h1 className='text-6xl md:text-8xl font font-semibold max-w-[50vw] font-[Inter]'>Robin Schweizer</h1>
 
 
@@ -42,7 +39,7 @@ export default function Hero() {
           </div>
           <div className="flex gap-4 mb-8 md:mb-0 flex-wrap">
             <a href="#contact"
-              className="border border-accent hover:border-white text-accent px-6 py-3 rounded-full font-medium transition-colors backdrop-blur-md bg-black/30 border ">
+              className="border border-accent hover:border-white text-accent px-6 py-3 rounded-full font-medium transition-colors backdrop-blur-md bg-black/30">
               Engagez-moi
             </a>
             <a href="/cv.pdf" download
@@ -53,7 +50,7 @@ export default function Hero() {
         </div>
 
         {/* Bas droite — stats */}
-        <div className="grid grid-cols-3 gap-10 bg-[#0d0d1a] border border-gray-800 rounded-2xl px-6 py-6 backdrop-blur-md bg-black/30 border border-white/20 ">
+        <div className="grid grid-cols-3 gap-10 rounded-2xl px-6 py-6 backdrop-blur-md bg-black/30 border border-white/20">
           {[
             { value: "5+", label: "Expériences" },
             { value: "20+", label: "Projets réalisés" },

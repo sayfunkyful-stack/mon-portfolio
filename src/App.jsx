@@ -7,6 +7,7 @@ import Portfolio from './Portfolio'
 import Contact from './Contact'
 import Me from './Me'
 import ProjectPage from './ProjectPage'
+import Footer from './Footer'
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
       <About />
       <Me />
       <Contact />
+      <Footer />
         </>
       } />
       <Route path="/projet/:slug" element={<ProjectPage />} />
