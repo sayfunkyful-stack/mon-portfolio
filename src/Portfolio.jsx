@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom"
 
 const projects = [
   {
-    slug: "embera-candles",
+    slug: "summr",
     title: "Site vitrine — EMBERA Candles",
     description: "Conception et développement d'un site vitrine pour une marque de bougies artisanales suisse. Design system complet, responsive et optimisé SEO.",
     longDescription: "Projet complet de A à Z — de la définition de l'identité visuelle jusqu'au déploiement. Création d'un design system avec tokens de couleurs, typographies et composants réutilisables. Intégration d'une boutique en ligne avec Stripe et optimisation des Core Web Vitals pour un score Lighthouse supérieur à 90.",
@@ -26,6 +26,17 @@ const projects = [
     images: [null, null],
   },
   {
+    slug: "mon-cv",
+    title: "Application web — Mon CV",
+    description: "Application web permettant d'analyser un CV via l'API Claude.",
+    longDescription: "Application full-stack permettant d'uploader un CV en PDF et d'obtenir une analyse détaillée via l'API Claude d'Anthropic. Interface soignée avec retour en temps réel, backend Node.js avec gestion des fichiers, et génération de recommandations personnalisées selon le poste visé.",
+    year: "2024",
+    role: "Développeur Full-stack",
+    category: "App Desktop",
+    stack: ["React", "Node.js", "Express", "Claude API"],
+    images: [null, null],
+  },
+    {
     slug: "mon-cv",
     title: "Application web — Mon CV",
     description: "Application web permettant d'analyser un CV via l'API Claude.",
