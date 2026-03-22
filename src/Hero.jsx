@@ -42,7 +42,7 @@ export default function Hero() {
               className="border border-accent hover:border-white text-accent px-6 py-3 rounded-full font-medium transition-colors backdrop-blur-md bg-black/30">
               Engagez-moi
             </a>
-            <a href="/images/CV_RobinSchweizer.pdf" download
+            <a href="/images/CV_Robin-Schweizer.pdf" download
               className="border border-white/30 hover:border-white text-white px-6 py-3 rounded-full font-medium transition-colors backdrop-blur-md bg-black/30 border ">
               Télécharger mon cv
             </a>
