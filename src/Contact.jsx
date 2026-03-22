@@ -16,7 +16,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="bg-black text-white py-24 px-6 text-center md:px-24 lg:px-48 ">
+    <section id="contact" className="bg-black text-white py-24 px-6 text-center md:px-24 lg:px-48 bg-linear-to-bl from-gray-900 from-10% to-black ">
       <h2 className="text-4xl font-bold mb-4">Contactez-moi</h2>
       <p className="text-gray-400 mb-16">
         Je réponds généralement sous 48 heures, parfois plus rapidement si je suis disponible.

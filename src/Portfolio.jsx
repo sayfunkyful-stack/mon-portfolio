@@ -1,55 +1,8 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
+import { projects } from "./projects"
 
-
-const projects = [
-  {
-    slug: "summr",
-    title: "Site vitrine — EMBERA Candles",
-    description: "Conception et développement d'un site vitrine pour une marque de bougies artisanales suisse. Design system complet, responsive et optimisé SEO.",
-    longDescription: "Projet complet de A à Z — de la définition de l'identité visuelle jusqu'au déploiement. Création d'un design system avec tokens de couleurs, typographies et composants réutilisables. Intégration d'une boutique en ligne avec Stripe et optimisation des Core Web Vitals pour un score Lighthouse supérieur à 90.",
-    year: "2024",
-    role: "Designer & Développeur Front-end",
-    category: "Website Design",
-    stack: ["React", "Tailwind", "Vite", "Stripe"],
-    images: [null, null, null],
-  },
-  {
-    slug: "digimar",
-    title: "Identité de marque — Digimar",
-    description: "Création d'une identité visuelle complète pour un projet de marketing digital.",
-    longDescription: "Développement d'une identité de marque cohérente incluant logo, palette de couleurs, typographies et guidelines d'usage. Déclinaison sur tous les supports : réseaux sociaux, documents, site web. Système de design documenté pour assurer la cohérence visuelle à long terme.",
-    year: "2024",
-    role: "Designer",
-    category: "Branding",
-    stack: ["Figma", "Illustrator", "Photoshop"],
-    images: [null, null],
-  },
-  {
-    slug: "mon-cv",
-    title: "Application web — Mon CV",
-    description: "Application web permettant d'analyser un CV via l'API Claude.",
-    longDescription: "Application full-stack permettant d'uploader un CV en PDF et d'obtenir une analyse détaillée via l'API Claude d'Anthropic. Interface soignée avec retour en temps réel, backend Node.js avec gestion des fichiers, et génération de recommandations personnalisées selon le poste visé.",
-    year: "2024",
-    role: "Développeur Full-stack",
-    category: "App Desktop",
-    stack: ["React", "Node.js", "Express", "Claude API"],
-    images: [null, null],
-  },
-    {
-    slug: "mon-cv",
-    title: "Application web — Mon CV",
-    description: "Application web permettant d'analyser un CV via l'API Claude.",
-    longDescription: "Application full-stack permettant d'uploader un CV en PDF et d'obtenir une analyse détaillée via l'API Claude d'Anthropic. Interface soignée avec retour en temps réel, backend Node.js avec gestion des fichiers, et génération de recommandations personnalisées selon le poste visé.",
-    year: "2024",
-    role: "Développeur Full-stack",
-    category: "App Desktop",
-    stack: ["React", "Node.js", "Express", "Claude API"],
-    images: [null, null],
-  },
-]
-
-const filters = ["All", "Website Design", "App Mobile Design", "App Desktop", "Branding"]
+const filters = ["All", "Website Design", "App Desktop"]
 
 export default function Portfolio() {
   const [active, setActive] = useState("All")
@@ -66,6 +19,13 @@ export default function Portfolio() {
 
   const closeOverlay = () => {
     setSelected(null)
+    setActiveImage(0)
+  }
+
+  const navigateProject = (dir) => {
+    const idx = filtered.findIndex(p => p.slug === selected.slug)
+    const next = filtered[(idx + dir + filtered.length) % filtered.length]
+    setSelected(next)
     setActiveImage(0)
   }
   
@@ -101,12 +61,22 @@ export default function Portfolio() {
             {/* Image cliquable */}
             <div
               onClick={() => openOverlay(project)}
-              className="bg-[#111] rounded-2xl aspect-video flex items-end p-4 cursor-pointer hover:opacity-80 transition-opacity"
+              className="bg-[#111] rounded-2xl aspect-video overflow-hidden relative cursor-pointer hover:opacity-80 transition-opacity"
             >
-              <div className="flex justify-between w-full text-sm text-gray-500">
-                <span>{project.title}</span>
-                <span>{project.category}</span>
-              </div>
+              {project.images[0] ? (
+                <img
+                  src={project.images[0]}
+                  alt={project.title}
+                  className="w-full h-full object-cover"
+                />
+              ) : (
+                <div className="w-full h-full flex items-end p-4">
+                  <div className="flex justify-between w-full text-sm text-gray-500">
+                    <span>{project.title}</span>
+                    <span>{project.category}</span>
+                  </div>
+                </div>
+              )}
             </div>
 
             {/* Infos */}
@@ -155,6 +125,25 @@ export default function Portfolio() {
             >
               ✕
             </button>
+
+            {/* Navigation prev/next */}
+            <div className="flex items-center justify-between mb-6 flex-col gap-4 sm:flex-row">
+              <button
+                onClick={() => navigateProject(-1)}
+                className="flex items-center gap-2 text-gray-400 hover:text-white border border-gray-700 hover:border-gray-400 px-4 py-2 rounded-full text-sm font-medium transition-all"
+              >
+                ← Projet précédent
+              </button>
+              <span className="text-gray-600 text-xs">
+                {filtered.findIndex(p => p.slug === selected.slug) + 1} / {filtered.length}
+              </span>
+              <button
+                onClick={() => navigateProject(1)}
+                className="flex items-center gap-2 text-gray-400 hover:text-white border border-gray-700 hover:border-gray-400 px-4 py-2 rounded-full text-sm font-medium transition-all"
+              >
+                Projet suivant →
+              </button>
+            </div>
 
             {/* Image principale */}
             <div className="bg-[#1a1a1a] rounded-xl aspect-video w-full mb-4 flex items-center justify-center">

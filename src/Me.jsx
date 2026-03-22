@@ -1,7 +1,7 @@
 export default function Me() {
   return (
-    <section className="bg-linear-to-b from-gray-900 to-black text-white  px-6 py-24 pb-6  flex flex-col gap-8 md:px-24 md:py-24 md:flex-row md:items-center lg:gap-20 lg:px-48">
-<div className=" h-124 border bg-no-repeat bg-contain bg-center border-gray-700 rounded-2xl flex items-center justify-center md:w-[50vw] bg-[url(/public/images/Portrait.png)]">
+    <section className="bg-linear-to-r from-gray-900 to-black text-white  px-6 py-24 pb-6  flex flex-col gap-8 md:px-24 md:py-24 md:flex-row md:items-center lg:gap-20 lg:px-48 min-h-[100vh] content-center ">
+<div className="  h-124 bg-bg-tertiary/[20%] bg-no-repeat bg-contain bg-linear rounded-2xl flex items-center justify-center md:w-[50vw] bg-[url(/public/images/Portrait.png)] bg-bottom">
 
 </div>
 
