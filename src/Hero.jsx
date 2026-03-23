@@ -52,9 +52,9 @@ export default function Hero() {
         {/* Bas droite — stats */}
         <div className="grid grid-cols-3 gap-10 rounded-2xl px-6 py-6 backdrop-blur-md bg-black/30 border border-white/20">
           {[
-            { value: "5+", label: "Expériences" },
-            { value: "20+", label: "Projets réalisés" },
-            { value: "80+", label: "Clients contents" },
+            { value: "3+", label: "Expériences" },
+            { value: "15+", label: "Projets réalisés" },
+            { value: "10+", label: "Clients contents" },
           ].map((stat, i) => (
             <div key={i} className="text-left">
               <p className="text-accent text-xl font-bold">{stat.value}</p>
