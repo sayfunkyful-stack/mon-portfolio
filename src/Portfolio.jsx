@@ -61,13 +61,13 @@ export default function Portfolio() {
             {/* Image cliquable */}
             <div
               onClick={() => openOverlay(project)}
-              className="bg-[#111] rounded-2xl aspect-video overflow-hidden relative cursor-pointer hover:opacity-80 transition-opacity"
+              className="bg-[#111] rounded-2xl aspect-video overflow-hidden relative cursor-pointer group"
             >
               {project.images[0] ? (
                 <img
                   src={project.images[0]}
                   alt={project.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
               ) : (
                 <div className="w-full h-full flex items-end p-4">
@@ -77,6 +77,12 @@ export default function Portfolio() {
                   </div>
                 </div>
               )}
+              {/* Overlay Dribbble */}
+              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-3">
+                <span className="text-white font-semibold text-lg text-center px-4">{project.title}</span>
+                <span className="text-accent text-xs uppercase tracking-widest">{project.category}</span>
+                <span className="mt-2 border border-white text-white text-sm px-5 py-2 rounded-full">Voir le projet</span>
+              </div>
             </div>
 
             {/* Infos */}
@@ -159,21 +165,29 @@ export default function Portfolio() {
             </div>
 
             {/* Thumbnails */}
-            <div className="flex gap-3 mb-8">
-              {selected.images.map((img, i) => (
-                <button
-                  key={i}
-                  onClick={() => setActiveImage(i)}
-                  className={`bg-[#1a1a1a] rounded-lg aspect-video w-20 flex items-center justify-center transition-all ${
-                    activeImage === i
-                      ? "border-2 border-accent"
-                      : "border border-gray-800 opacity-50 hover:opacity-100"
-                  }`}
-                >
-                  <span className="text-gray-600 text-xs">{i + 1}</span>
-                </button>
-              ))}
-            </div>
+            {selected.images.length > 1 && (
+              <div className="flex gap-3 mb-8">
+                {selected.images.map((img, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setActiveImage(i)}
+                    className={`rounded-lg aspect-video w-20 overflow-hidden transition-all ${
+                      activeImage === i
+                        ? "border-2 border-accent"
+                        : "border border-gray-800 opacity-50 hover:opacity-100"
+                    }`}
+                  >
+                    {img ? (
+                      <img src={img} alt={`${selected.title} ${i + 1}`} className="w-full h-full object-cover" />
+                    ) : (
+                      <div className="w-full h-full bg-[#1a1a1a] flex items-center justify-center">
+                        <span className="text-gray-600 text-xs">{i + 1}</span>
+                      </div>
+                    )}
+                  </button>
+                ))}
+              </div>
+            )}
 
             {/* Contenu */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pb-12">

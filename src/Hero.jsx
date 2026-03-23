@@ -3,7 +3,7 @@ import Navbar from './Navbar';
 
 export default function Hero() {
   return (
-    <section className="relative bg-gradient-to-t from-black from-10% to-gray-900 to-100% text-white min-h-200 h-screen px-6 py-6 flex flex-col justify-between lg:px-48 md:pt-12   lg:pb-32 md:px-24 md:py-24 ">
+    <section className="relative bg-gradient-to-t from-black from-10% to-gray-900 to-100% text-white min-h-[200] px-6 py-6 flex flex-col justify-between lg:px-48 md:pt-12   md:px-24 md:py-24 pb-16  lg:pb-32">
       
 
 
